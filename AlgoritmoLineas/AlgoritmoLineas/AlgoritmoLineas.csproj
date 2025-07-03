@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98C9DC67-F6C8-4EA3-982E-8CBA5AD662A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AlgoritmoLineas</RootNamespace>
+    <AssemblyName>AlgoritmoLineas</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bresenham.cs" />
+    <Compile Include="BresenhamCirculo.cs" />
+    <Compile Include="BresenhamEllipse.cs" />
+    <Compile Include="BSpline.cs" />
+    <Compile Include="CohenSutherland.cs" />
+    <Compile Include="CurvasBezier.cs" />
+    <Compile Include="DDA.cs" />
+    <Compile Include="FrmBresenham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBresenham.Designer.cs">
+      <DependentUpon>FrmBresenham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBresenhamCircunferencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBresenhamCircunferencias.Designer.cs">
+      <DependentUpon>FrmBresenhamCircunferencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBresenhamEllipse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBresenhamEllipse.Designer.cs">
+      <DependentUpon>FrmBresenhamEllipse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBSpline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBSpline.Designer.cs">
+      <DependentUpon>FrmBSpline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCohenSutherland.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCohenSutherland.Designer.cs">
+      <DependentUpon>FrmCohenSutherland.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCurvasBezier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCurvasBezier.Designer.cs">
+      <DependentUpon>FrmCurvasBezier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDDA.Designer.cs">
+      <DependentUpon>FrmDDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRellenoFiguras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRellenoFiguras.Designer.cs">
+      <DependentUpon>FrmRellenoFiguras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmScanline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmScanline.Designer.cs">
+      <DependentUpon>FrmScanline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSutherlandHodgman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSutherlandHodgman.Designer.cs">
+      <DependentUpon>FrmSutherlandHodgman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RellenoFiguras.cs" />
+    <Compile Include="Scanline.cs" />
+    <Compile Include="SutherlandHodgman.cs" />
+    <EmbeddedResource Include="FrmBresenham.resx">
+      <DependentUpon>FrmBresenham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBresenhamCircunferencias.resx">
+      <DependentUpon>FrmBresenhamCircunferencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBresenhamEllipse.resx">
+      <DependentUpon>FrmBresenhamEllipse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBSpline.resx">
+      <DependentUpon>FrmBSpline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCohenSutherland.resx">
+      <DependentUpon>FrmCohenSutherland.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCurvasBezier.resx">
+      <DependentUpon>FrmCurvasBezier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDDA.resx">
+      <DependentUpon>FrmDDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRellenoFiguras.resx">
+      <DependentUpon>FrmRellenoFiguras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmScanline.resx">
+      <DependentUpon>FrmScanline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSutherlandHodgman.resx">
+      <DependentUpon>FrmSutherlandHodgman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
